@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'layout'
+  name: 'Home'
   
 }
   

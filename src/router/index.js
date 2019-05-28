@@ -13,8 +13,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'layout',   //S1 name的作用: 通常用于在router-view中识别渲染对应组件，可参考 文档01
-      component: () => import('@/pages/layout/layout'),   //S2 路由懒加载,仅在路由跳转时 才加载相关页面
+      name: 'home',   //S1 name的作用: 通常用于在router-view中识别渲染对应组件，可参考 文档01
+      component: () => import('@/pages/Home/home'),   //S2 路由懒加载,仅在路由跳转时 才加载相关页面
     },
 
   ]
