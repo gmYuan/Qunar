@@ -1,19 +1,20 @@
 <template>
   <div>
-  	<h1>我是layout内容</h1>
-
+    <home-header></home-header>
   	
-  	<router-link to="/list">点击跳转到list组件</router-link>
-
-  	<div class="onepx-border">我是边框测试哦</div>
       
       
   </div>
 </template>
 
 <script>
+import homeHeader from './components/header'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    homeHeader,
+  },
   
 }
   

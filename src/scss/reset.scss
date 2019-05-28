@@ -4,8 +4,23 @@
   box-sizing: border-box;
 }
 
+body,
+h1,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+
+
+
 a {
   text-decoration: none;
-  
+
 }
 
