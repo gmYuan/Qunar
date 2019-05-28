@@ -5,9 +5,7 @@
   	
   	<router-link to="/list">点击跳转到list组件</router-link>
 
-  	<router-view>
-  	</router-view>
-
+  	<div class="onepx-border">我是边框测试哦</div>
       
       
   </div>
@@ -15,7 +13,7 @@
 
 <script>
 export default {
-  
+  name: 'layout'
   
 }
   

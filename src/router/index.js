@@ -17,10 +17,5 @@ export default new Router({
       component: () => import('@/pages/layout/layout'),   //S2 路由懒加载,仅在路由跳转时 才加载相关页面
     },
 
-     {
-      path: '/list',
-      name: 'list',   
-      component: () => import('@/pages/list/list'),
-    }
   ]
 })
