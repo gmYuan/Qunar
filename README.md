@@ -17,43 +17,62 @@
 
 ## 问题记录
 
-1 无法直接在main.js中引入全局的.scss文件
+1 Q: 如何实现移动端1px效果
 
-解决方法:
+A: 项目中采用的方法是: svg + border-image,  具体是使用了 `postcss-write-svg`插件
 
-S1 虽然vue-cli中对SASS已经进行了配置，但是还是需要手动安装对应loader的
+步骤如下:
 
-即: `npm install sass-loader node-sass --save-dev`
+S1 安装插件: `npm install jonathantneal/postcss-write-svg --save-dev`
 
+S2 在.postcssrc.js文件中，引入插件:
 
-2 meta-viewport原理
+```js
+module.exports = {
+  "plugins": {
+    "postcss-import": {},
+    "postcss-url": {},
 
+    "autoprefixer": {},
 
+    // 新增postcss-write-svg解决移动端1px问题
+    "postcss-write-svg": {},
 
-3 移动端1px问题
+  },
+}
+```
 
-  https://juejin.im/entry/5a619c62518825734a74c2cc
+S3 在common.scss中定义公有的class样式(common.scss一般会在main.js中全局引入)
 
-  https://github.com/jonathantneal/postcss-write-svg
+```scss
 
-  https://segmentfault.com/q/1010000016163754/
+// 解决1px问题
+@svg 1px-border {
+  width: 4px;
+  height: 4px;
+  @rect {
+    fill: transparent;
+    width: 100%;
+    height: 100%;
+    stroke-width: 25%;
+    stroke: var(--color, black);
+  }
+}
+.onepx-border {
+  //border: 1px solid;
+  border-bottom: 1px solid ;
+  border-image: svg(1px-border param(--color red)) 1 stretch;
+}
+```
 
+S4 在需要有1px边框的元素上，直接使用.onepx-border类即可
 
+```html
+<div class="onepx-border">
+  test
+</div>
+```
 
-4 移动端点击300ms延迟的问题
-
-  https://www.jianshu.com/p/bec7dbd5cdc6
-
-
-
-5 移动端适配问题
-
-  
-
-
-6 vue-router里name的作用
-
-  https://www.jianshu.com/p/f86fea2cd109
 
 
 
