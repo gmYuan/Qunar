@@ -12,6 +12,10 @@ import '@scss/iconfont.css'
 import  FastClick from 'fastclick'
 FastClick.attach(document.body);
 
+// 引入vue-awesome-swiper
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper)
 
 
 

@@ -21,3 +21,8 @@
 i {
   display: inline-block
 }
+
+// 修复vue-swiper手动滑动报错
+html {
+  touch-action: none;
+}
