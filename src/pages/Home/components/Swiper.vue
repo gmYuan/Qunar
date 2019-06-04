@@ -1,12 +1,14 @@
 <template>
   <div class="wrap">
+
     <swiper :options="swiperOption">
     
       <swiper-slide
         v-for="(item,index) in bannerList"
-
+        :key="item.id"
       >
-        <img></img>
+        <img :src="item.img" alt="图片" class="banner-img">
+       
       </swiper-slide>
       
          
@@ -25,7 +27,11 @@ export default {
   data() {
     return {
       // swiper配置对象
-      swiperOption: {},
+      swiperOption: {
+        pagination: '.swiper-pagination',
+        autoplay: 3000,
+        loop : true,
+      },
 
       // 轮播banner数据列表
       bannerList: [
@@ -52,13 +58,35 @@ export default {
   
 
 }
-  
- 
 </script>
 
 
 <style lang="scss" scoped>
+
 .wrap {
+  width: 100%;
+  height: 209px;  //会转化为vw,所以才可以直接写
+  overflow: hidden;
+
+  // 覆盖第3方样式
+  /deep/ .swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0 8px;
+  }
+
+  /deep/ .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+
+  }
+
+  /deep/ .swiper-pagination-bullet-active {
+    background: #fff;
+  }
+
+  // 组件部分
+  .banner-img{
+    width: 100%;
+  }
   
 }
 
