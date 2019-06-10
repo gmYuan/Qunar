@@ -146,6 +146,18 @@ export default {
 ```
 
 
+3  Q: 如何实现 icon部分左右滑动划页
+
+A:
+S1 S1 左右滑动切换页面，其实可以理解为是一个 `不会自动切换的轮播效果`
+
+S2 通过vue-swiper组件，swiper-slide内部包裹 ul-li-img即可
+
+S3.1 对一个对象数组通过分成二维数组，形成分页效果
+
+S3.2 currentPage的计算方法是: Math.floor(index/每页数量)
+
+S4 具体代码，可参考 [icons部分](https://github.com/gmYuan/Qunar/blob/self/src/pages/Home/components/Icons.vue)
 
 
 ## 其他
