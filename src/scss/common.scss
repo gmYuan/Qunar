@@ -1,3 +1,4 @@
+
 // 解决1px问题
 @svg 1px-border {
   width: 4px;
@@ -12,7 +13,7 @@
 }
 .onepx-border {
   //border: 1px solid;
-  border-left: 1px solid ;
+  border-bottom: 1px solid ;
   border-image: svg(1px-border param(--color red)) 1 stretch;
 }
 
@@ -26,3 +27,4 @@ i {
 html {
   touch-action: none;
 }
+
