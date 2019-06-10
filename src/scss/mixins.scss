@@ -1,0 +1,7 @@
+// 只显示一行，多余点点点
+
+@mixin ellipse() {
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
