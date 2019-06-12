@@ -82,6 +82,7 @@ export default {
 .icon-wrap {
   width: 100%;
   height: 370px;
+  background: #fff;
   // outline: 1px solid red;
 
   // 第3方swiper样式
