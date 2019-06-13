@@ -17,11 +17,19 @@
   border-image: svg(1px-border param(--color red)) 1 stretch;
 }
 
+// 字体设置
+body {
+  font-family: Arial,"Microsoft Yahei","Helvetica Neue",Helvetica,sans-serif;
+}
+
+
 
 // 通用iconfont字体设置
 i {
   display: inline-block
 }
+
+
 
 // 修复vue-swiper手动滑动报错
 html {
