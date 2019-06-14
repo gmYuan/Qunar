@@ -6,6 +6,8 @@
       <home-swiper></home-swiper>
       <home-icons></home-icons>
       <home-hot></home-hot>
+      <home-maylike></home-maylike>
+      <home-weekend></home-weekend>
     </div>
     
   </div>
@@ -16,6 +18,8 @@ import homeHeader from './components/Header'
 import homeSwiper from './components/Swiper'
 import homeIcons from './components/Icons'
 import homeHot from './components/Hot'
+import homeMaylike from './components/Maylike'
+import homeWeekend from './components/Weekend'
 
 
 export default {
@@ -25,6 +29,8 @@ export default {
     homeSwiper,
     homeIcons,
     homeHot,
+    homeMaylike,
+    homeWeekend,
   },
   
 }
