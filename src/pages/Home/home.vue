@@ -20,6 +20,7 @@ import homeIcons from './components/Icons'
 import homeHot from './components/Hot'
 import homeMaylike from './components/Maylike'
 import homeWeekend from './components/Weekend'
+import axios from 'axios'
 
 
 export default {
@@ -32,6 +33,20 @@ export default {
     homeMaylike,
     homeWeekend,
   },
+
+  methods: {
+    getHomeInfo () {
+      axios.get('/api/index.json').then( res => {
+        console.log(res)
+
+      })
+
+    },
+  },
+
+  mounted () {
+    this.getHomeInfo()
+  }
   
 }
   
