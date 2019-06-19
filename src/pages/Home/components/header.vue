@@ -11,7 +11,7 @@
       </div>
     </div>
     
-    <div class="vw-header-right">
+    <div class="vw-header-right" @click.native="toCity">
       <div class="city-wrap">
         <span class="city">{{city}}</span>
         <i class="iconfont city_icon">&#xe79b;</i>

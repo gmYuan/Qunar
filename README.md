@@ -147,4 +147,16 @@ S3.2 currentPage的计算方法是: Math.floor(index/每页数量)
 S4 具体代码，可参考 [icons部分](https://github.com/gmYuan/Qunar/blob/self/src/pages/Home/components/Icons.vue)
 
 
+4 Q: 如何实现后台数据对接到前端
+
+A: 
+S1 在一个页面的父组件中，获取到后台数据
+
+S2 通过自定义动态属性，传入到子组件中
+
+S3 子组件通过props属性，接收父组件传入的数据
+
+
+
+
 ## 其他
