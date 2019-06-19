@@ -2,12 +2,12 @@
   <div>
 
     <div class="home-wrap">
-      <home-header></home-header>
-      <home-swiper></home-swiper>
-      <home-icons></home-icons>
-      <home-hot></home-hot>
-      <home-maylike></home-maylike>
-      <home-weekend></home-weekend>
+      <home-header :city = city></home-header>
+      <home-swiper :list = bannerList></home-swiper>
+      <home-icons :list = iconList></home-icons>
+      <home-hot :list = hotList></home-hot>
+      <home-maylike :list = mayLikeList></home-maylike>
+      <home-weekend :list = weekendList></home-weekend>
     </div>
     
   </div>
@@ -34,10 +34,31 @@ export default {
     homeWeekend,
   },
 
+  data () {
+    return {
+      city: '',
+      bannerList: [],
+      iconList: [],
+      hotList: [],
+      mayLikeList: [],
+      weekendList: []
+    }
+  }, 
+
   methods: {
     getHomeInfo () {
       axios.get('/api/index.json').then( res => {
         console.log(res)
+        if (res.data && res.data.ret) {
+          const data = res.data.data
+
+          this.city = data.city
+          this.bannerList = data.bannerList
+          this.iconList = data.iconList
+          this.hotList = data.hotList
+          this.mayLikeList = data.mayLikeList
+          this.weekendList = data.weekendList
+        }
 
       })
 

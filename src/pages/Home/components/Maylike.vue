@@ -10,52 +10,35 @@
     </div>
 
     <ul class="like-list">
-      <li class="like-item onepx-border">
+      <li class="like-item onepx-border"
+        v-for = "item of list"
+        :key = "item.id"
+      >
         <a href="javascript:;" class="full-link clearfix">
-          <div class="img-wrap"
-          >
-            <img class="like-img" src="http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg" alt="#">
+          <div class="img-wrap">
+            <img class="like-img" 
+            :src="item.imgUrl" 
+            :alt="item.title"
+            >
           </div>
 
-          <div class="like-tag">随买随用</div>
+          <div class="like-tag"
+            :style="{ backgroundImage:`url(${item.tagUrl})` }"
+          >
+            {{item.tagDesc}}
+          </div>
 
           <div class="like-info">
-            <div class="like-title">上海迪士尼</div>
+            <div class="like-title">{{item.title}}</div>
             <div class="like-price">
               <span class="price-category">
-                ¥<em class="price-num">399</em>
+                ¥<em class="price-num">{{item.price}}</em>
               </span>
               起
-              <span class="like-address">浦东新区</span>
+              <span class="like-address">{{item.address}}</span>
             </div>
             <div class="like-feature">
-              <div> 全球最大的迪士尼城堡 </div>
-            </div>
-
-          </div>
-        </a>
-      </li>
-
-      <li class="like-item">
-        <a href="javascript:;" class="full-link clearfix">
-          <div class="img-wrap"
-          >
-            <img class="like-img" src="http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg" alt="#">
-          </div>
-
-          <div class="like-tag">随买随用</div>
-
-          <div class="like-info">
-            <div class="like-title">上海迪士尼</div>
-            <div class="like-price">
-              <span class="price-category">
-                ¥<em class="price-num">399</em>
-              </span>
-              起
-              <span class="like-address">浦东新区</span>
-            </div>
-            <div class="like-feature">
-              <div> 全球最大的迪士尼城堡 </div>
+              <div> {{item.desc}} </div>
             </div>
 
           </div>
@@ -81,6 +64,10 @@ export default {
     return {
      
     }
+  },
+
+  props: {
+    list: Array,
   },
 
 

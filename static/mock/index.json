@@ -1,6 +1,7 @@
 {
   "ret": true,
   "data": {
+    "city": "上海",
     "bannerList": [{
         "id": "0001",
         "img": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/d7bbc21db442366a882e04ddc984669a.jpg_750x200_85e640d9.jpg"
@@ -97,7 +98,8 @@
         "desc": "全球最大的迪士尼城堡",
         "price": 356,
         "address": "浦东新区",
-        "tagUrl": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png"
+        "tagUrl": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png",
+        "tagDesc": "随买随用"
       }, {
         "id": "0002",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/1811/e4/e4b9b471d2afc473a3.img.jpg_200x200_9a7794fc.jpg",
@@ -105,7 +107,8 @@
         "desc": "敢上1200米长的木质过山车吗？",
         "price": 210,
         "address": "松江区",
-        "tagUrl": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png"
+        "tagUrl": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png",
+        "tagDesc": "随买随用"
       }, {
         "id": "0003",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/1802/d3/d345e53fdc97849ba3.img.jpg_200x200_c00f5662.jpg",
@@ -113,16 +116,17 @@
         "desc": "",
         "price": 138,
         "address": "杨浦区",
-        "tagUrl": "https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png"
-
+        "tagUrl": "https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png",
+        "tagDesc": "可订明日"
       }, {
         "id": "0004",
-        "imgUrl": "http://img1.qunarzz.com/sight/p0/1701/87/87761450d838bb93a3.img.jpg_200x200_8911148c.jpg",
-        "title": "上海名人蜡像馆",
-        "desc": "",
-        "price": 80,
-        "address": "嘉定区",
-        "tagUrl": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png"
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1709/87/87e3acc2ee041669a3.img.jpg_200x200_ad0b46ef.jpg",
+        "title": "上海外滩星空艺术馆",
+        "desc": "这里最近很火哦，好多人都在点评它呢！",
+        "price": 53,
+        "address": "黄浦区",
+        "tagUrl": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png",
+        "tagDesc": "随买随用"
       }],
 
 
@@ -133,22 +137,22 @@
         "desc": "中西合璧，现代和传统各有各的精彩"
       }, {
         "id": "0002",
-        "imgUrl": "http://img1.qunarzz.com/sight/source/1603/ad/69b0fc5f48ad5f.jpg_r_640x214_b0fd5c7b.jpg",
+        "url": "http://img1.qunarzz.com/sight/source/1603/ad/69b0fc5f48ad5f.jpg_r_640x214_b0fd5c7b.jpg",
         "title": "周末亲子爱玩",
         "desc": "走进自然或玩转乐园，感知大千世界，游乐项目惊险刺激，特色表演异彩纷呈，等你们~"
       }, {
         "id": "0003",
-        "imgUrl": "http://img1.qunarzz.com/sight/source/1511/1d/fe098e8cfec117.jpg_r_640x214_a9be292a.jpg",
+        "url": "http://img1.qunarzz.com/sight/source/1511/1d/fe098e8cfec117.jpg_r_640x214_a9be292a.jpg",
         "title": "上海城市观光",
         "desc": "来这里寻找你所不认识的魔都 ，感受云端漫步，品味老上海风情，享受休闲时光"
       }, {
         "id": "0004",
-        "imgUrl": "http://img1.qunarzz.com/sight/source/1505/7b/2a6b0ce087f0e5.jpg_r_640x214_5c76b115.jpg",
+        "url": "http://img1.qunarzz.com/sight/source/1505/7b/2a6b0ce087f0e5.jpg_r_640x214_5c76b115.jpg",
         "title": "情迷博物馆",
         "desc": "走进艺术殿堂，电影博物馆生动演绎着电影人和电影背后的故事，你不想知道吗~"
       }, {
         "id": "0005",
-        "imgUrl": "http://img1.qunarzz.com/sight/source/1505/6f/2711e071838590.jpg_r_640x214_8f1ad9a1.jpg",
+        "url": "http://img1.qunarzz.com/sight/source/1505/6f/2711e071838590.jpg_r_640x214_8f1ad9a1.jpg",
         "title": "戏水清凉一夏",
         "desc": "夏日戏水，玩“乐”无穷"
       }]

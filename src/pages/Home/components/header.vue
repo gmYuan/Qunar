@@ -13,7 +13,7 @@
     
     <div class="vw-header-right">
       <div class="city-wrap">
-        <span class="city">城市</span>
+        <span class="city">{{city}}</span>
         <i class="iconfont city_icon">&#xe79b;</i>
       </div>
     </div>
@@ -26,7 +26,10 @@
 <script>
 
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String,
+  },
   
 }
   

@@ -6,36 +6,25 @@
     </h2>
 
     <ul class="weekend-list">
-      <li class="weekend-item">
+      <li class="weekend-item"
+        v-for = "item of list"
+        :key = "item.id"
+      
+      >
         <a href="javascript:;" class="full-link">
-          <div class="img-wrap"
-          >
-            <img class="weekend-img" src="http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg" alt="#">
+          <div class="img-wrap">
+            <img class="weekend-img" 
+              :src = "item.url" 
+              :alt = "item.title"
+            >
           </div>
 
           <div class="weekend-info">
-            <p class="name">上海必打卡</p>
-            <p class="desc">中西合璧，现代和传统各有各的精彩</p>
+            <p class="name">{{item.title}}</p>
+            <p class="desc">{{item.desc}}</p>
           </div>
         </a>
       </li>
-
-       <li class="weekend-item">
-        <a href="javascript:;" class="full-link">
-          <div class="img-wrap"
-          >
-            <img class="weekend-img" src="http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg" alt="#">
-          </div>
-
-          <div class="weekend-info">
-            <p class="name">上海必打卡</p>
-            <p class="desc">中西合璧，现代和传统各有各的精彩</p>
-          </div>
-        </a>
-      </li>
-
-
-     
     </ul>
 
 
@@ -52,6 +41,10 @@ export default {
      
     }
   },
+
+  props: {
+    list: Array,
+  }
 
 
 }

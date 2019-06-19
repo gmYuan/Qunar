@@ -16,7 +16,7 @@
 
     <ul class="places-wrap">
       <li class="place-item"
-      v-for = "(item, index)  of hotList"
+      v-for = "(item, index)  of list"
       :key = "item.id"
       >
         <a href="javascript:;" class="full-link">
@@ -53,42 +53,11 @@ export default {
 
   data() {
     return {
-        "hotList": [{
-        "id": "0001",
-        "url": "http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_250x250_57ac4faa.jpg",
-        "desc": "上海迪士尼乐园",
-        "price": 399,
-        "topSrc": "http://img1.qunarzz.com/piao/fusion/1710/ab/159673b63e6ca702.png"
-      }, {
-        "id": "0002",
-        "url": "http://img1.qunarzz.com/sight/p0/1811/e4/e4b9b471d2afc473a3.img.jpg_250x250_963fe222.jpg",
-        "desc": "上海欢乐谷",
-        "price": 195,
-        "topSrc": "http://img1.qunarzz.com/piao/fusion/1710/2d/36d0c4adaebbbc02.png"
-      }, {
-        "id": "0003",
-        "url": "http://img1.qunarzz.com/sight/p0/1904/d5/d579b03a110d75a8a3.img.jpg_250x250_cf952d13.jpg",
-        "desc": "上海野生动物园",
-        "price": 118,
-        "topSrc": "http://img1.qunarzz.com/piao/fusion/1710/67/edc47ffef9e96b02.png"
-      }, {
-        "id": "0004",
-        "url": "http://img1.qunarzz.com/sight/p0/1904/6e/6edffb73a665bc70a3.img.jpg_250x250_5d7fce3e.jpg",
-        "desc": "上海海昌海洋公园",
-        "price": 150
-      }, {
-        "id": "0005",
-        "url": "http://img1.qunarzz.com/tuan/team2/1507/2c/83e0e0e7ae082a.jpg_250x250_87692c41.jpg",
-        "desc": "东方明珠",
-        "price": 60
-      }, {
-        "id": "0006",
-        "url": "http://img1.qunarzz.com/sight/p0/1803/26/2645c1b2ee526285a3.water.jpg_250x250_c9ab8185.jpg",
-        "desc": "黄浦江游览（十六铺码头）",
-        "price": 60
-      }],
-      
+        
     }
+  },
+  props: {
+    list: Array,
   },
 
   

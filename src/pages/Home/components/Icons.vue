@@ -36,54 +36,17 @@ export default {
       swiperOption: {
         pagination: '.swiper-pagination',
       },
-
-      // icon列表数组
-      iconList:[{
-        "id": "0001",
-        "url": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-        "desc": "景点门票"
-      }, {
-        "id": "0002",
-        "url": "http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png",
-        "desc": "水上乐园"
-      },{
-        "id": "0003",
-        "url": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/3ef092d0a89ffddb7f781cda30c8ae49.png",
-        "desc": "魔都上海"
-      },{
-        "id": "0004",
-        "url": "http://img1.qunarzz.com/piao/fusion/1803/f5/c4c9d9830404e602.png",
-        "desc": "室内娱乐"
-      }, {
-        "id": "0005",
-        "url": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
-        "desc": "动植物园"
-      }, {
-        "id": "0006",
-        "url": "http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png",
-        "desc": "世纪公园"
-      }, {
-        "id": "0007",
-        "url": "http://img1.qunarzz.com/piao/fusion/1803/47/c2b659e048b11602.png",
-        "desc": "上海野生"
-      }, {
-        "id": "0008",
-        "url": "http://img1.qunarzz.com/piao/fusion/1803/de/f26be47a6bf02a02.png",
-        "desc": "上海迪士尼"
-      }, {
-        "id": "0009",
-        "url": "https://img1.qunarzz.com/piao/fusion/1810/50/26ffa31b56646402.png",
-        "desc": "上海海昌"
-      }],
-
-
     }
+  },
+
+  props: {
+    list: Array,
   },
 
   computed: {
     createPage () {
       let pages = []
-      this.iconList.map( (item, index) => {
+      this.list.map( (item, index) => {
         let currentPage = Math.floor(index / 8)   // 分别为 0/1/2... flor向下取整
 
         if (!pages[currentPage]) {        // null和undefined时，都是false
