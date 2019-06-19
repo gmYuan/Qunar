@@ -45,7 +45,7 @@
 
 <script>
 export default {
-  name: "HomeMaylike",
+  name: "HomeWeekend",
 
   data() {
     return {

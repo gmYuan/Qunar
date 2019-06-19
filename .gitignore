@@ -6,8 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 
 
-package-lock.
-static/mock
+package-lock.json
+
+# static/mock
 
 
 
