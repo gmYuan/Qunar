@@ -11,7 +11,7 @@
       </div>
     </div>
     
-    <div class="vw-header-right" @click.native="toCity">
+    <div class="vw-header-right" @click = "toCity">
       <div class="city-wrap">
         <span class="city">{{city}}</span>
         <i class="iconfont city_icon">&#xe79b;</i>
@@ -30,6 +30,12 @@ export default {
   props: {
     city: String,
   },
+
+  methods: {
+    toCity () {
+      this.$router.push('/city')
+    },
+  },
   
 }
   
@@ -47,7 +53,7 @@ export default {
   align-items: center;
 
   width: 750px;
-  height: 88px;
+  height: $headerHeight;
   background: $headerBackground;
   color: #fff;
 

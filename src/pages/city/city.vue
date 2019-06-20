@@ -1,22 +1,26 @@
 <template>
   <div>
-    test
+    <city-header></city-header>
 
-   
   </div>
 </template>
 
 <script>
 
+import cityHeader from './components/header'
+
 export default {
   name: 'City',
+  components: {
+    cityHeader,
+  }
 
 }
   
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
 
 
 </style>
