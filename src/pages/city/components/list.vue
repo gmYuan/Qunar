@@ -3,7 +3,7 @@
 
     <div class="area">
       <h2 class="title">热门城市</h2>
-      <ul class="lists clearfix">
+      <ul class="lists">
         <li class="map-list">
           <a href="javascript:;" class="address">北京</a>
         </li>
@@ -31,9 +31,99 @@
         <li class="map-list">
           <a href="javascript:;" class="address">北京</a>
         </li>
+      </ul>
+    </div>
 
+     <div class="area">
+      <h2 class="title">字母排序</h2>
+      <ul class="character-lists">
+        <li class="character-item">
+          <a href="javascript:;" class="character">A</a>
+        </li>
+         <li class="character-item">
+          <a href="javascript:;" class="character">A</a>
+        </li>
+         <li class="character-item">
+          <a href="javascript:;" class="character">A</a>
+        </li>
+         <li class="character-item">
+          <a href="javascript:;" class="character">A</a>
+        </li>
+         <li class="character-item">
+          <a href="javascript:;" class="character">A</a>
+        </li>
+         <li class="character-item">
+          <a href="javascript:;" class="character">A</a>
+        </li>
+         <li class="character-item">
+          <a href="javascript:;" class="character">A</a>
+        </li>
+      </ul>
+    </div>
 
-
+    <!-- 具体内容 -->
+    <div class="area">
+      <h2 class="title">A</h2>
+      <ul class="lists">
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+      </ul>
+    </div>
+    <div class="area">
+      <h2 class="title">B</h2>
+      <ul class="lists">
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
+        <li class="map-list">
+          <a href="javascript:;" class="address">北京</a>
+        </li>
       </ul>
     </div>
 
@@ -62,6 +152,13 @@ export default {
 @import '@scss/mixins.scss';
 
 .city-list {
+  position: absolute;
+  top: 88px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+
   color: #212121;
   font-size: 28px;
   line-height: 1;
@@ -71,8 +168,9 @@ export default {
       font-size: 24px;
       padding: 24px 30px;
     }
-
+    // 热门城市列表
     .lists {
+      overflow: hidden;
       position: relative;
       z-index: 0;
       background: #fff;
@@ -106,6 +204,32 @@ export default {
           }
        }
     }
+
+    // 城市字母列表
+    .character-lists {
+      overflow: hidden;
+      position: relative;
+      z-index: 0;
+      background-color: #fff;
+      padding: 30px 0;
+
+      .character-item {
+        float: left;
+        position: relative;
+        z-index: 10;
+        width: 16.66%;
+        height: 90px;
+        line-height: 90px;
+        font-size: 28px;
+        text-align: center;
+        color: #212121;
+        .character {
+          display: block;
+          @include ellipse();
+        }
+      }
+    }
+
   }
 }
 
