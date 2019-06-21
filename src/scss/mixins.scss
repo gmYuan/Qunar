@@ -1,7 +1,17 @@
 // 只显示一行，多余点点点
 
 @mixin ellipse() {
-    white-space: nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
   }
+
+// 解决1px问题
+@mixin onepx-border($pos, $color) {
+  
+  //border: 1px solid;
+  border-#{$pos}: 1px solid;
+  border-image: svg(1px-border param(--color $color)) 1 stretch;
+ 
+  
+}
