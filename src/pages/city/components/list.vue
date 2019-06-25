@@ -1,155 +1,200 @@
 <template>
-  <div class="city-list">
+  <div class="city-list" ref="cityWrapper">
+    <div>
 
-    <div class="area">
-      <h2 class="title">热门城市</h2>
-      <ul class="lists">
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-      </ul>
-    </div>
+      <div class="area">
+        <h2 class="title">热门城市</h2>
+        <ul class="lists">
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+        </ul>
+      </div>
 
-     <div class="area">
-      <h2 class="title">字母排序</h2>
-      <ul class="character-lists">
-        <li class="character-item">
-          <a href="javascript:;" class="character">A</a>
-        </li>
-         <li class="character-item">
-          <a href="javascript:;" class="character">A</a>
-        </li>
-         <li class="character-item">
-          <a href="javascript:;" class="character">A</a>
-        </li>
-         <li class="character-item">
-          <a href="javascript:;" class="character">A</a>
-        </li>
-         <li class="character-item">
-          <a href="javascript:;" class="character">A</a>
-        </li>
-         <li class="character-item">
-          <a href="javascript:;" class="character">A</a>
-        </li>
-         <li class="character-item">
-          <a href="javascript:;" class="character">A</a>
-        </li>
-      </ul>
-    </div>
+      <div class="area">
+        <h2 class="title">字母排序</h2>
+        <ul class="character-lists">
+          <li class="character-item">
+            <a href="javascript:;" class="character">A</a>
+          </li>
+          <li class="character-item">
+            <a href="javascript:;" class="character">A</a>
+          </li>
+          <li class="character-item">
+            <a href="javascript:;" class="character">A</a>
+          </li>
+          <li class="character-item">
+            <a href="javascript:;" class="character">A</a>
+          </li>
+          <li class="character-item">
+            <a href="javascript:;" class="character">A</a>
+          </li>
+          <li class="character-item">
+            <a href="javascript:;" class="character">A</a>
+          </li>
+          <li class="character-item">
+            <a href="javascript:;" class="character">A</a>
+          </li>
+        </ul>
+      </div>
 
-    <!-- 具体内容 -->
-    <div class="area">
-      <h2 class="title">A</h2>
-      <ul class="lists">
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-      </ul>
-    </div>
-    <div class="area">
-      <h2 class="title">B</h2>
-      <ul class="lists">
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-        <li class="map-list">
-          <a href="javascript:;" class="address">北京</a>
-        </li>
-      </ul>
-    </div>
+      <!-- 具体内容 -->
+      <div class="area">
+        <h2 class="title">A</h2>
+        <ul class="lists">
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+        </ul>
+      </div>
 
-   
-      
+      <div class="area">
+        <h2 class="title">B</h2>
+        <ul class="lists">
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="area">
+        <h2 class="title">C</h2>
+        <ul class="lists">
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+          <li class="map-list">
+            <a href="javascript:;" class="address">北京</a>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
   </div>
 </template>
 
 <script>
+import BScroll from "@better-scroll/core"
+
 
 export default {
-  name: 'cityList',
- 
-  methods: {
-    
-    
+  name: "cityList",
+
+  mounted () {
+    this.scroll = new BScroll(this.$refs.cityWrapper, {
+      scrollbar: true,
+      mouseWheel: {
+        speed: 20,
+        invert: false,
+        easeTime: 300
+      },
+    })
+
   },
-  
-}
+
+  methods: {},
+
+};
 </script>
 
 
 <style lang="scss" scoped>
-
-@import '@scss/variables.scss';
-@import '@scss/mixins.scss';
+@import "@scss/variables.scss";
+@import "@scss/mixins.scss";
 
 .city-list {
   position: absolute;
@@ -163,7 +208,7 @@ export default {
   font-size: 28px;
   line-height: 1;
   .area {
-    background: #F5F5F5;
+    background: #f5f5f5;
     .title {
       font-size: 24px;
       padding: 24px 30px;
@@ -175,7 +220,7 @@ export default {
       z-index: 0;
       background: #fff;
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 33.33%;
 
@@ -184,25 +229,25 @@ export default {
         border-left: 2px solid #ddd;
         border-right: 2px solid #ddd;
       }
-       
-       .map-list {
-          float: left;
-          position: relative;
-          z-index: 10;
-          width: 33.333%;
-          height: 92px;
-          line-height: 92px;
-          font-size: 28px;
-          text-align: center;
-          border-bottom: 2px solid #ddd;
-          color: #212121;
-          margin-bottom: -2px;
 
-          .address {
-            display: block;
-            @include ellipse();
-          }
-       }
+      .map-list {
+        float: left;
+        position: relative;
+        z-index: 10;
+        width: 33.333%;
+        height: 92px;
+        line-height: 92px;
+        font-size: 28px;
+        text-align: center;
+        border-bottom: 2px solid #ddd;
+        color: #212121;
+        margin-bottom: -2px;
+
+        .address {
+          display: block;
+          @include ellipse();
+        }
+      }
     }
 
     // 城市字母列表
@@ -229,9 +274,6 @@ export default {
         }
       }
     }
-
   }
 }
-
-
 </style>
