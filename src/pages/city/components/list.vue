@@ -174,6 +174,11 @@ import BScroll from "@better-scroll/core"
 export default {
   name: "cityList",
 
+  props: {
+    hotcity: Array,
+    cities: Object,
+  },
+
   mounted () {
     this.scroll = new BScroll(this.$refs.cityWrapper, {
       scrollbar: true,

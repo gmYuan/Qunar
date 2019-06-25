@@ -1,13 +1,14 @@
 <template>
   <div>
     <city-header></city-header>
-    <city-list></city-list>
+    <city-list :hotcity="hotcity" :cities="cities"></city-list>
 
   </div>
 </template>
 
 <script>
 
+import axios from 'axios'
 import cityHeader from './components/header'
 import cityList from './components/list'
 
@@ -16,7 +17,25 @@ export default {
   components: {
     cityHeader,
     cityList
-  }
+  },
+  data () {
+    return {
+      hotcity: [],
+      cities: {},
+    }
+  },
+
+  mounted () {
+    axios.get('/api/city.json').then(res => {
+      const data = res.data
+      if (data.ret && data.data) {
+        this.hotcity = data.data.hotCities
+        this.cities = data.data.cities
+
+        // console.log(this.hotcity, this.cities)
+      }
+    })
+  },
 
 }
   
