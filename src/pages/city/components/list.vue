@@ -5,159 +5,40 @@
       <div class="area">
         <h2 class="title">热门城市</h2>
         <ul class="lists">
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
+          <li class="map-list"
+            v-for="item of hotcity"
+            :key = "item.id"
+          >
+            <a href="javascript:;" class="address">{{item.name}}</a>
           </li>
         </ul>
       </div>
 
+
       <div class="area">
         <h2 class="title">字母排序</h2>
         <ul class="character-lists">
-          <li class="character-item">
-            <a href="javascript:;" class="character">A</a>
-          </li>
-          <li class="character-item">
-            <a href="javascript:;" class="character">A</a>
-          </li>
-          <li class="character-item">
-            <a href="javascript:;" class="character">A</a>
-          </li>
-          <li class="character-item">
-            <a href="javascript:;" class="character">A</a>
-          </li>
-          <li class="character-item">
-            <a href="javascript:;" class="character">A</a>
-          </li>
-          <li class="character-item">
-            <a href="javascript:;" class="character">A</a>
-          </li>
-          <li class="character-item">
-            <a href="javascript:;" class="character">A</a>
+          <li class="character-item"
+            v-for="(item, key) of cities"
+            :key = "key"
+          >
+            <a href="javascript:;" class="character">{{key}}</a>
           </li>
         </ul>
       </div>
 
       <!-- 具体内容 -->
-      <div class="area">
-        <h2 class="title">A</h2>
+      <div class="area"
+        v-for = "(item, key) of cities"
+        :key = "key"
+      >
+        <h2 class="title">{{key}}</h2>
         <ul class="lists">
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="area">
-        <h2 class="title">B</h2>
-        <ul class="lists">
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="area">
-        <h2 class="title">C</h2>
-        <ul class="lists">
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
-          </li>
-          <li class="map-list">
-            <a href="javascript:;" class="address">北京</a>
+          <li class="map-list"
+            v-for="inner of item"
+            :key = "inner.id"
+          >
+            <a href="javascript:;" class="address">{{inner.name}}</a>
           </li>
         </ul>
       </div>
@@ -182,11 +63,7 @@ export default {
   mounted () {
     this.scroll = new BScroll(this.$refs.cityWrapper, {
       scrollbar: true,
-      mouseWheel: {
-        speed: 20,
-        invert: false,
-        easeTime: 300
-      },
+      mouseWheel: true,
     })
 
   },
