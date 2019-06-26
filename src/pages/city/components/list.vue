@@ -104,7 +104,7 @@ export default {
 
 .city-list {
   position: absolute;
-  top: 88px;
+  top: 178px;
   left: 0;
   bottom: 0;
   right: 0;
