@@ -21,8 +21,9 @@
           <li class="character-item"
             v-for="(item, key) of cities"
             :key = "key"
+            @click="saveCharacter"
           >
-            <a href="javascript:;" class="character">{{key}}</a>
+            <a href="javascript:;" class="character"> {{key}}  </a>
           </li>
         </ul>
       </div>
@@ -32,7 +33,7 @@
         v-for = "(item, key) of cities"
         :key = "key"
       >
-        <h2 class="title">{{key}}</h2>
+        <h2 class="title" :ref="key">{{key}}</h2>
         <ul class="lists">
           <li class="map-list"
             v-for="inner of item"
@@ -60,15 +61,38 @@ export default {
     cities: Object,
   },
 
+  data () {
+    return {
+      clickCharacter: '',
+    }
+  },
+
+
   mounted () {
     this.scroll = new BScroll(this.$refs.cityWrapper, {
+      click: true,
       scrollbar: true,
       mouseWheel: true,
     })
 
   },
 
-  methods: {},
+  methods: {
+    saveCharacter (e) {
+      this.clickCharacter = e.target.innerText
+    },
+  },
+
+  watch: {
+    clickCharacter () {
+      console.log(2222, this.clickCharacter, this.$refs[this.clickCharacter])
+      if (this.clickCharacter) {
+        const element = this.$refs[this.clickCharacter][0]
+        this.scroll.scrollToElement(element)
+      }
+
+    },
+  },
 
 };
 </script>
