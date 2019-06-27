@@ -2,7 +2,13 @@
   <div>
 
     <div class="search">
-      <input class="search-input" type="text" placeholder="输入城市名或拼音">
+      <input @model="searchContent"  class="search-input" type="text" placeholder="输入城市名或拼音">
+    </div>
+
+    <div class="search-content">
+      <ul>
+        <li>123</li>
+      </ul>
     </div>
     
   </div>
@@ -12,6 +18,20 @@
 
 export default {
   name: 'citySearch',
+  props: {
+    cities: Object,
+  },
+  data () {
+    return {
+      searchContent: '',
+    }
+  },
+
+  watch: {
+    searchContent () {
+      
+    },
+  },
 
 }
 
@@ -21,7 +41,6 @@ export default {
 @import '@scss/variables.scss';
 
 .search {
- 
   background-color: $cityHeaderBg;
   padding: 20px 10px;
   color: #fff;
@@ -34,6 +53,16 @@ export default {
     border-radius: 5px;
     color: #666;
   }
+}
+
+.search-content {
+  position: absolute;
+  top: 162px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: green;
 }
   
 </style>
