@@ -2,12 +2,16 @@
   <div>
 
     <div class="search">
-      <input @model="searchContent"  class="search-input" type="text" placeholder="输入城市名或拼音">
+      <input v-model="searchContent"  class="search-input" type="text" placeholder="输入城市名或拼音">
     </div>
 
-    <div class="search-content">
+    <div class="search-content"
+         ref="search"
+         v-show="searchContent"
+    >
       <ul>
-        <li>123</li>
+        <li class="search-item" v-for="item of searchResult" :key="item.id">{{item.name}}</li>
+        <li class="search-item" v-show="hasNoData"> 无对应内容 </li>
       </ul>
     </div>
     
@@ -16,22 +20,60 @@
 
 <script>
 
+import BScroll from 'better-scroll'
+
 export default {
   name: 'citySearch',
   props: {
     cities: Object,
   },
+
   data () {
     return {
-      searchContent: '',
+      searchContent: '',    // 搜索内容
+      searchResult: [],     // 搜索结果
+      timer: null,          // 节流计时器
     }
+  },
+  computed:  {
+    city() {
+      return this.cities    // 搜索源数据,类型是对象- 数组
+    },
+    hasNoData (){
+      return !this.searchResult.length
+    },
   },
 
   watch: {
     searchContent () {
-      
+
+      if (this.timer) {
+        clearTimeout(this.timer)
+      }
+
+      if (!this.searchContent) {  // 当搜索内容为空字符串时,直接置空 结果数组并返回
+        this.searchResult = []
+        return
+      }
+
+      this.timer = setTimeout( ()=> {
+        const result = []
+        for (let key in this.city) {
+          this.city[key].forEach(item => {  // 遍历对象里的数组, item又是一个对象
+            if (item.spell.indexOf(this.searchContent) > -1 || item.name.indexOf(this.searchContent) > -1 ) {
+              result.push(item)
+            }
+          })
+        }
+        // console.log(222, result)   // result表示本次搜索结果
+        this.searchResult = result
+      }, 500)
     },
   },
+
+  mounted () {
+    this.scroll = new BScroll(this.$refs.search)
+  }
 
 }
 
@@ -57,12 +99,19 @@ export default {
 
 .search-content {
   position: absolute;
-  top: 162px;
+  top: 190px;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 2;
-  background: green;
+  background: #eee;
+
+  .search-item {
+    padding: 20px;
+    line-height: 38px;
+    border-bottom: 1px solid #aaa;
+    background: #fff;
+  }
 }
   
 </style>
