@@ -10,7 +10,13 @@
          v-show="searchContent"
     >
       <ul>
-        <li class="search-item" v-for="item of searchResult" :key="item.id">{{item.name}}</li>
+        <li class="search-item" 
+          v-for="item of searchResult" 
+          :key="item.id"
+          @click="handleClickCity(item.name)"
+          >
+            {{item.name}}
+        </li>
         <li class="search-item" v-show="hasNoData"> 无对应内容 </li>
       </ul>
     </div>
@@ -21,6 +27,9 @@
 <script>
 
 import BScroll from 'better-scroll'
+
+import {mapMutations} from 'vuex'
+
 
 export default {
   name: 'citySearch',
@@ -42,6 +51,18 @@ export default {
     hasNoData (){
       return !this.searchResult.length
     },
+  },
+
+  methods: {
+    ...mapMutations(['setCurrentCity']),
+
+    handleClickCity (city) {
+      this.setCurrentCity(city)
+      
+      this.$router.push('/')
+    },
+
+
   },
 
   watch: {
@@ -72,7 +93,9 @@ export default {
   },
 
   mounted () {
-    this.scroll = new BScroll(this.$refs.search)
+    this.scroll = new BScroll(this.$refs.search, {
+      click: true,
+    })
   }
 
 }
@@ -103,7 +126,7 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 20;
   background: #eee;
 
   .search-item {

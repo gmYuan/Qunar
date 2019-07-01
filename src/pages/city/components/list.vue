@@ -8,6 +8,7 @@
           <li class="map-list"
             v-for="item of hotcity"
             :key = "item.id"
+            @click="handleClickCity(item.name)"
           >
             <a href="javascript:;" class="address">{{item.name}}</a>
           </li>
@@ -38,6 +39,7 @@
           <li class="map-list"
             v-for="inner of item"
             :key = "inner.id"
+            @click="handleClickCity(inner.name)"
           >
             <a href="javascript:;" class="address">{{inner.name}}</a>
           </li>
@@ -51,6 +53,7 @@
 
 <script>
 import BScroll from "@better-scroll/core"
+import {mapState, mapActions} from 'vuex'
 
 
 export default {
@@ -67,20 +70,26 @@ export default {
     }
   },
 
-
-  mounted () {
-    this.scroll = new BScroll(this.$refs.cityWrapper, {
-      click: true,
-      scrollbar: true,
-      mouseWheel: true,
-    })
+  computed: {
+    ...mapState(['currentCity'])
 
   },
 
   methods: {
+    ...mapActions(['setCurrentCity']),   // 把公有方法注册到组件methods中
+
     saveCharacter (e) {
       this.clickCharacter = e.target.innerText
     },
+
+    handleClickCity (city) {
+      // alert(city)
+      this.setCurrentCity(city)
+      this.$router.push('/')
+
+    },
+
+
   },
 
   watch: {
@@ -92,6 +101,15 @@ export default {
       }
 
     },
+  },
+
+  mounted () {
+    this.scroll = new BScroll(this.$refs.cityWrapper, {
+      click: true,
+      scrollbar: true,
+      mouseWheel: true,
+    })
+
   },
 
 };

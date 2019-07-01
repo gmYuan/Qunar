@@ -25,16 +25,24 @@
 
 <script>
 
+import { mapState, mapMutations, mapActions } from 'vuex';
+
 export default {
   name: 'HomeHeader',
   props: {
-    city: String,
+    // city: String,   由数据获取+prop传入，改为子组件内部Vuex获取
+  },
+  computed: {
+    ...mapState({city: 'currentCity'}),
+   
   },
 
   methods: {
     toCity () {
       this.$router.push('/city')
     },
+
+  
   },
   
 }

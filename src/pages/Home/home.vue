@@ -2,7 +2,7 @@
   <div>
 
     <div class="home-wrap">
-      <home-header :city = city></home-header>
+      <home-header></home-header>
       <home-swiper :list = bannerList></home-swiper>
       <home-icons :list = iconList></home-icons>
       <home-hot :list = hotList></home-hot>
@@ -36,7 +36,7 @@ export default {
 
   data () {
     return {
-      city: '',
+      // city: '',     由数据获取+prop传入，改为子组件内部Vuex获取
       bannerList: [],
       iconList: [],
       hotList: [],
@@ -52,7 +52,7 @@ export default {
         if (res.data && res.data.ret) {
           const data = res.data.data
 
-          this.city = data.city
+          // this.city = data.city
           this.bannerList = data.bannerList
           this.iconList = data.iconList
           this.hotList = data.hotList
