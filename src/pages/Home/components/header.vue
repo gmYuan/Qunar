@@ -100,8 +100,8 @@ export default {
     line-height: 70px;
     
     .city-wrap {
-      width: 144px;
-      padding-left: 22px;
+      min-width: 144px;
+      padding: 0 11px;
      
       .city_icon {
         margin-left: -6px;
