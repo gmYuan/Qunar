@@ -22,6 +22,7 @@ import homeMaylike from './components/Maylike'
 import homeWeekend from './components/Weekend'
 import axios from 'axios'
 
+import { mapState } from 'vuex'
 
 export default {
   name: 'Home',
@@ -35,19 +36,29 @@ export default {
   },
 
   data () {
+   
     return {
       // city: '',     由数据获取+prop传入，改为子组件内部Vuex获取
       bannerList: [],
       iconList: [],
       hotList: [],
       mayLikeList: [],
-      weekendList: []
+      weekendList: [],
+
+      //  keep-alive相关
+      lastCity: '',      // 用来判断 选取的城市是否发生变化
+    
     }
   }, 
 
+  computed: {
+    ...mapState(['currentCity']),  // 用作查询参数，获取当前城市对应的 首页数据
+
+  },
+
   methods: {
     getHomeInfo () {
-      axios.get('/api/index.json').then( res => {
+      axios.get(`/api/index.json?${this.currentCity}`).then( res => {
         console.log(res)
         if (res.data && res.data.ret) {
           const data = res.data.data
@@ -66,8 +77,16 @@ export default {
   },
 
   mounted () {
+    this.lastCity = this.currentCity
     this.getHomeInfo()
-  }
+  },
+
+  activated () {
+    if (this.lastCity !== this.currentCity) {
+      this.lastCity = this.currentCity
+      this.getHomeInfo()
+    }
+  },
   
 }
   
