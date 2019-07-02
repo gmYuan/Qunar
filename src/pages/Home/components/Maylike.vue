@@ -14,7 +14,10 @@
         v-for = "item of list"
         :key = "item.id"
       >
-        <a href="javascript:;" class="full-link clearfix">
+        <router-link
+          :to=" `detail/${item.id}` "
+          class="full-link clearfix"
+        >
           <div class="img-wrap">
             <img class="like-img" 
             :src="item.imgUrl" 
@@ -42,7 +45,8 @@
             </div>
 
           </div>
-        </a>
+
+        </router-link>
       </li>
 
     </ul>

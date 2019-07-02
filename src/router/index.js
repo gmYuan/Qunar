@@ -9,14 +9,21 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',   
+      name: 'home',   
       component: () => import('@/pages/Home/Home'), //路由懒加载,仅在路由跳转时 才加载相关页面
     },
     {
       path: '/city',
-      name: 'City',
+      name: 'city',
       component: () => import('@/pages/City/City')
     },
+
+    {
+      name: 'detail',
+      path: '/detail/:id',
+      component: () => import('@/pages/detail/detail')
+    },
+
 
   ]
 })
