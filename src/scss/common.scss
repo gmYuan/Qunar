@@ -49,6 +49,13 @@ i {
   display: inline-block
 }
 
+// 通用background-iamge设置
+.bg {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 
 // 修复vue-swiper手动滑动报错
