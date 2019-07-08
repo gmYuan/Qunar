@@ -47,6 +47,7 @@ export default {
 
   methods: {
     changeOpacity () {
+      console.log('scroll')
       const top = document.documentElement.scrollTop
       if (top > 40) {
         this.showHeader = true
@@ -65,8 +66,11 @@ export default {
 
   activated () {
     window.addEventListener('scroll', this.changeOpacity)
-    
   },
+
+  deactivated () {
+    window.removeEventListener('scroll', this.changeOpacity)
+  }
 
 }
 </script>
