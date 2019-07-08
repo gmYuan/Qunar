@@ -2,6 +2,8 @@
   <div class="main-page">
     
     <detail-banner></detail-banner>
+    <detail-header></detail-header>
+
 
 
   </div>
@@ -11,6 +13,8 @@
 <script>
 
 import detailBanner from './components/banner'
+import detailHeader from './components/header'
+
 
 export default {
   name: "detail",
@@ -23,6 +27,7 @@ export default {
 
   components: {
     detailBanner,
+    detailHeader
   },
 
 
@@ -41,6 +46,8 @@ export default {
   width: 100%;
   min-height: 100%;
   background: #f5f5f5;
+
+  height: 2000px;
 }
 
 
