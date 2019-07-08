@@ -395,5 +395,48 @@ S2 根据滚动动态切换 opacity值(绑定动态对象)
 S3 在对全局对象(window)进行事件绑定后，需要对其进行解绑，否则会作用在所有组件中
 
 
+9 Q: 如何实现类似的多级目录结构的渲染
+
+A:
+
+S1 创建一级目录的显示
+
+S2 在当前组件内部，递归调用当前的 组件!! (name属性的作用)
+
+```HTML
+<template>
+  <div class="lists">
+    <h3 class="item"
+      v-for="(item, index) of lists"
+      :key="index"
+    >
+      <i class="title-icon"></i>
+      <span class="title"> {{item.title}}</span>
+
+      <div v-if="item.children" >  
+        <detail-list :lists="item.children"></detail-list>    
+      </div>
+
+
+    </h3>
+  
+  </div>
+</template>
+
+
+<script>
+export default {
+  name: "detailList",
+
+  props: {
+    lists: Array,
+  }
+
+}
+</script>
+```
+
+
+
 
 ## 其他
