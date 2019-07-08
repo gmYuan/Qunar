@@ -19,7 +19,15 @@
       </div>
     </div>
 
-    <common-gallery :imgArr="gallaryImgs" v-show="isShowGallery" @close="handleClose"></common-gallery>
+    <fade-animation>
+      <common-gallery 
+        :imgArr="gallaryImgs" 
+        v-show="isShowGallery" 
+        @close="handleClose"
+      >
+      </common-gallery>
+    </fade-animation>
+    
 
 
   </div>
@@ -30,6 +38,7 @@
 <script>
 
 import CommonGallery from 'components/gallery/Gallery'
+import FadeAnimation from 'components/animation/FadeAnimation'
 
 export default {
   name: "detailBanner",
@@ -49,6 +58,7 @@ export default {
 
   components: {
     CommonGallery,
+    FadeAnimation,
   },
 
   methods: {
