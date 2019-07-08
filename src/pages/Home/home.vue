@@ -59,7 +59,7 @@ export default {
   methods: {
     getHomeInfo () {
       axios.get(`/api/index.json?${this.currentCity}`).then( res => {
-        console.log(res)
+        // console.log(res)
         if (res.data && res.data.ret) {
           const data = res.data.data
 

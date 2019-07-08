@@ -4,22 +4,22 @@
     <div class="banner-wrap" @click="showGallery">
       <div class="img-wrap">
         <img
-          src="http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_600x330_8572a930.jpg"
+          :src="bannerImg"
           alt
         />
       </div>
 
       <div class="banner-info">
-        <div class="banner-title">上海迪士尼乐园</div>
+        <div class="banner-title">{{sightName}}</div>
       </div>
 
       <div class="banner-photo">
         <i class="iconfont icon"> &#xe62f; </i>
-        <em class="num"> 76 </em>
+        <em class="num"> {{gallaryImgs.length}} </em>
       </div>
     </div>
 
-    <common-gallery :imgArr="imgArr" v-show="isShowGallery" @close="handleClose"></common-gallery>
+    <common-gallery :imgArr="gallaryImgs" v-show="isShowGallery" @close="handleClose"></common-gallery>
 
 
   </div>
@@ -34,14 +34,14 @@ import CommonGallery from 'components/gallery/Gallery'
 export default {
   name: "detailBanner",
 
+  props: {
+    sightName: String,
+    bannerImg: String,
+    gallaryImgs: Array
+  },
+
   data() {
     return {
-      imgArr: [
-        {id: '0001', url: "http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_r_800x800_d6a63068.jpg"},
-        {id: '0002', url: "http://img1.qunarzz.com/sight/p0/1906/3d/3d61f18973a5ab7a3.img.jpg_r_800x800_cb717d83.jpg"},
-        {id: '0003', url: "http://img1.qunarzz.com/sight/p0/1906/de/de426d5aaf95f96a3.img.jpg_r_800x800_7588f0e0.jpg"}
-      ],
-
       isShowGallery : false,   //画廊是否显示
 
     }

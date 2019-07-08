@@ -23,7 +23,10 @@ export default new Router({
       path: '/detail/:id',
       component: () => import('@/pages/detail/detail')
     },
+  ],
 
+  scrollBehavior (to, from, savedPosition) { 
+    return { x: 0, y: 0 }     // 切换组件时默认显示顶部
+  }
 
-  ]
 })

@@ -19,7 +19,9 @@
       v-for = "(item, index)  of list"
       :key = "item.id"
       >
-        <a href="javascript:;" class="full-link">
+        <router-link class="full-link"
+          :to=" `detail/${item.id}`"
+        >
           <div class="rate-wrap"
             v-if=" index < 3"
           >
@@ -39,7 +41,7 @@
             起
           </div>
 
-        </a>
+        </router-link>
       </li>
     </ul>
 
